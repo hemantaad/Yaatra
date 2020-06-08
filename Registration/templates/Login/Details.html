@@ -1,0 +1,38 @@
+{% extends 'Login/Main2.html' %}
+{% block content %}
+{% load static %}
+<section>
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-12">
+            <div class="container px-5 py-5">
+                {% if drv %}
+                {% for s in drv %}
+                <div class="row">
+                    <h5>Driver Name:</h5>{{s.name}}
+                </div>
+                <div class="row">
+                    <h5>Experience:</h5>{{s.experience}}
+                </div>
+                <div class="row">
+                    <h5>Bus Number:</h5>{{s.number}}
+                </div>
+                <div class="row">
+                    <h5>Contact Number:</h5>{{s.busnumber}}
+                </div>
+                <div class="row">
+                    <h5>Total Fare:</h5>{{s.fare}}
+                </div>
+                {% endfor %}
+                {% endif %}
+                <br>
+                <div class="row">
+                    <button type="submit" class="btn btn-primary">Book Ticket</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-12">
+            <img style="width:250px" src="{% static 'images/bus.gif' %}">
+        </div>
+    </div>
+</section>
+{% endblock %}

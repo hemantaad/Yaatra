@@ -1,0 +1,47 @@
+{% extends 'Login/Main2.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-capitalize col-lg-8 col-md-8 col-12">Bus Ticket</h1>
+    <div class="form-group col-lg-8 col-md-8 col-12">
+        <hr>
+    </div>
+
+    <form action="Buses" method="POST">
+        {% csrf_token %}
+        <div class="form-group col-lg-8 col-md-8 col-12">
+            <label for="sou">Source:</label>
+            <input type="text" class="form-control" name="source" id="sou">
+            <datalist id="sou">
+                {% if srs %}
+                {% for k in srs %}
+                <option value="{{k.source}}">{{k.source}}</option>
+                {% endfor %}
+                {% endif %}
+            </datalist>
+        </div>
+        <div class="form-group col-lg-8 col-md-8 col-12">
+            <label for="des">Destination:</label>
+            <input type="text" class="form-control" name="destination" id="des">
+            <datalist id="des">
+                {% if srs %}
+                {% for k in srs %}
+                <option value="{{k.destination}}">{{k.destination}}</option>
+                {% endfor %}
+                {% endif %}
+            </datalist>
+        </div>
+
+        <div class="form-group col-lg-8 col-md-8 col-12">
+            <label for="date">Date:</label>
+            <input type="date" class="form-control" placeholder="Enter Date" name="date" id="date"
+                   autocomplete="off">
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+

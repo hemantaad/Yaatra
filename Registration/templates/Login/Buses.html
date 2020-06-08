@@ -1,0 +1,42 @@
+{% extends 'Login/Main2.html' %}
+{% block content %}
+
+
+<div class="container">
+    <h2>These are the available Buses.</h2>
+    <br>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Yatayat</th>
+            <th>Details</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        {% if obj %}
+        {% for s in obj %}
+        <tr>
+            <td>{{ s.source }}</td>
+            <td>{{ s.destination }}</td>
+            <td>{{ s.date }}</td>
+            <td>{{ s.time }}</td>
+            <td>{{ s.yatayat }}</td>
+            <td>
+                <form action="Details">
+                    <button type="submit" class="btn btn-primary">View Details</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'Registration/Main.html' %}
+{% block content %}
+{% load static %}
+<section>
+    <div class="container-fluid">
+        <h1 class="text-center text-capitalize pt-4">Contact Us</h1>
+        <hr class="w-25 mx-auto pb-5">
+        <div class="row mb-4">
+            <div class="col-lg-4 col-md-4 col-12 pl-5">
+                <div class="card" style="width:250px" >
+                    <img class="card-img-top" src="{% static 'images/hem.jpg' %}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Er.Hemanta Adhikari</h4>
+                        <p class="card-text">Founder/C.E.O</p>
+                        <a href="https://www.facebook.com/hemz.adi" target="_blank" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card" style="width:250px">
+                    <img class="card-img-top" src="{% static 'images/rashik.jpg' %}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Er.Rashik Shrestha</h4>
+                        <p class="card-text">Co.Founder</p>
+                        <a href="https://www.facebook.com/rashik.shrestha.37" target="_blank" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card" style="width:250px">
+                    <img class="card-img-top" src="{% static 'images/dangi.jpg' %}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Er.Abhishek Dangi</h4>
+                        <p class="card-text">Co.Founder</p>
+                        <a href="https://www.facebook.com/abhishekdangi595" target="_blank" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-info">
+    <article class="py-5 text-center">
+        <div>
+            <h3 class="display-4 text-white">+977 056-591022</h3>
+            <p class="text-black">We are here to help and answer any question you might have.</p>
+            <button class="btn btn-dark">Contact Now</button>
+        </div>
+    </article>
+</section>
+
+
+{% endblock %}

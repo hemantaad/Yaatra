@@ -1,0 +1,77 @@
+{% extends 'Registration/Main.html' %}
+{% block content %}
+{% load static %}
+<div class="row py-4">
+    <div class="col-lg-8 col-md-8 col-12">
+        <h1 class="px-3">About Yaatra</h1>
+        <hr>
+        <div class="row">
+            <div class=" px-4 col-lg-4 col-md-4 col-12">
+                <img style="width:250px" src="{% static 'images/hem1.jpg' %}">
+            </div>
+            <div class="col-lg-8 col-md-8 col-12">
+                <h5>How it all Started ?</h5>
+                <p>2015- <b>Hemanta Adhikari</b>, an 20-year-old college dropout, seemed to harbour dreams of
+                    entrepreneurship which compelled him to take the plunge with his first start-up Sangam. Sangam
+                    enabled booking tickets online of different means of transporatation in one place , later on, got
+                    converted to become Yaatra.</p>
+                <p>2017- Adhikari was also selected for Thiel Fellowship, a 2-year-old program started by the founder of
+                    C.G group which gave him funding of $100,000 to pursue and make real the idea of his start-up.
+                    Yaatra was launched in Kathmandu.</p>
+                <p>2018- In August of this year, Yaatra received its first Series A funding.</p>
+                <p><b>Becoming the Face of Nepali Start-ups</b></p>
+                <p>2018- In December of this year, Yaatra received funding of a whopping amount of $25 million from its
+                    investors namely Ncell , C.G group and others.</p>
+            </div>
+        </div>
+        <div class="pl-4">
+            <p>April 2018- Yaatra app was launched. The mobile app was a catalyst in writing the success story of this
+                ticket booking chain start-up that was to follow. It is a user-friendly app that helps customers to book
+                tickets
+                directly. Yaatra, by now had expanded to Pokhara, Dharan, Chitwan, Kakarvitta, Dang, Mahendranagar and
+                was spreading at a massive
+                pace. It has almost come up to 2000 Tourist Buses, 20,000 micros and 100 flights in Nepal</p>
+            <p>
+                July 2019- Yaatra bagged $100 million in Series C Round of funding from Japanese investor SoftBank. This
+                year proved to be a financially fulfilling year. Yaatra now had the backing of one of the most prominent
+                and powerful investors in the world.</p>
+            <p><b>Conquering the Asian Territory and Stepping into the International Markets</b></p>
+            <p>2020- This is the year that marked the establishment of the Yaatra empire in Asia-Pacific and
+                kick-started
+                international proliferation by establishing operations in UK, UAE, Dubai, China, Singapore and
+                Indonesia. It also became a unicorn in September when it raised funding of $800 million from SoftBank
+                and already had raised $200 million from its existing investors. </p>
+            <p>2020- With the backing of Greenoaks, C.G group, Ncell, Hero enterprise and China Lodging
+                Group as its solid group of investors, Yaatra is not far from becoming a global success story, perhaps
+                to some
+                extent it has. Today it has more than 330,000 Tourist Bus in 500 cities globally. And <b>Adhikari</b>,
+                still young and who
+                has a long way ahead plans to make it the world’s largest oldest chain by 2023!</p>
+        </div>
+    </div>
+    <div class="container px-4 col-lg-4 col-md-4 col-12">
+        <h2>Get in Touch</h2>
+        <p>"If you have any queries or concerns, please do not hesitate to contact us."</p>
+        <form action="about">
+            <div class="form-group">
+                <label for="usr">Name:</label>
+                <input type="text" class="form-control" id="usr" name="username">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Adress:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" class="form-control" id="subject" name="subject">
+            </div>
+            <div class="form-group">
+                <label for="comment">Message:</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

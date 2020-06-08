@@ -1,0 +1,40 @@
+{% extends 'Registration/Main.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-capitalize col-lg-8 col-md-8 col-12">Register</h1>
+    <div class="form-group col-lg-8 col-md-8 col-12">
+    <hr>
+    </div>
+    <form action="register" method="POST">
+        {% csrf_token %}
+        <div class="form-group col-lg-8 col-md-8 col-12">
+            <label for="FirstName">First Name:</label>
+            <input type="text" class="form-control" id="firstname" placeholder="Enter First Name"
+                   name="firstname" autocomplete="off">
+        </div>
+        <div class="form-group col-lg-8 col-md-8 col-12">
+            <label for="LastName">Last Name:</label>
+            <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name" name="lastname"
+                   autocomplete="off">
+        </div>
+        <div class="form-group col-lg-8 col-md-8 col-12">
+            <label for="Email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"
+                   autocomplete="off">
+        </div>
+        <div class="form-group col-lg-8 col-md-8 col-12">
+            <label for="Username">Username:</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username"
+                   autocomplete="off">
+        </div>
+        <div class="form-group col-lg-8 col-md-8 col-12">
+            <label for="Password">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password"
+                   name="password">
+        </div>
+        <div class="form-group col-lg-8 col-md-8 col-12">
+            <button type="submit" class="btn btn-primary">Signup</button>
+        </div>
+</div>
+</form>
+{% endblock %}
